@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    int i,n;
+    double cp[20],supplyT[20],targetT[20],supplyST[20],targetST[20],sortedStream[40],dH[20],dTmin=10.0;
+
+    printf("Enter the total number of streams:\n");
+    scanf("%d",&n);
+    printf("------------------------------------------------------------------\n");
+
+    printf(" CP     | Ts    | Tt    |Sh_Ts  |Sh_Tt  |\n");
+
+    for(i=0;i<n;i++)
+    {
+        scanf("%lf %lf %lf",&cp[i],&supplyT[i],&targetT[i]);
+
+
+        if(targetT[i]<supplyT[i])
+        {
+           supplyST[i]=supplyT[i]-dTmin/2;
+           targetST[i]=targetT[i]-dTmin/2;
+        }
+        else
+        {
+           supplyST[i]=supplyT[i]+dTmin/2;
+           targetST[i]=targetT[i]+dTmin/2;
+        }
+
+        printf("%lf   |%lf    |\n",supplyST[i],targetST[i]);
+
+        printf("-----------------------------\n");
+    }
+
+
+
+}
