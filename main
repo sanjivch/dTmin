@@ -1,14 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    int i,n;
+    int i,j,n;
     double cp[20],supplyT[20],targetT[20],supplyST[20],targetST[20],sortedStream[40],dH[20],dTmin=10.0;
 
     printf("Enter the total number of streams:\n");
     scanf("%d",&n);
     printf("------------------------------------------------------------------\n");
 
-    printf(" CP     | Ts    | Tt    |Sh_Ts  |Sh_Tt  |\n");
+    printf(" CP     | Ts    | Tt    |\n");
 
     for(i=0;i<n;i++)
     {
@@ -31,6 +31,27 @@ int main()
         printf("-----------------------------\n");
     }
 
+    for(i=0;i<2*n;i++)
+    {
+        if(i<n)
+        sortedStream[i]=supplyST[i];
+        else
+        sortedStream[i]=targetST[i-n];
 
+        //printf("%lf \n",sortedStream[i]);
+
+    }
+
+    for(i=0;i<2*n;i++)
+    {
+        if(sortedStream[i]==sortedStream[i+1])
+        {
+            for(j=i;j<2*n;j++)
+            {
+            sortedStream[j]=sortedStream[j+1];
+            }
+        }
+        printf("%lf \n",sortedStream[i]);
+    }
 
 }
