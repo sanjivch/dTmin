@@ -8,4 +8,4 @@ A GUI based Pinch Analysis tool!
 
 Thank you for following this page!
 
-©[Sanjiv Ch](https://www.linkedin.com/in/sanjivch09) 2016-17
+©[Sanjiv Ch](https://www.linkedin.com/in/sanjivch09) 2016-17  [HOME](https://sanjivch.github.io/)
