@@ -57,3 +57,33 @@ int main()
     }
 
 }
+/*
+#include <iostream> 
+#include <map>
+#include <string>
+#include <iterator>
+
+using namespace std;
+
+ 
+int main()
+{
+    int numComponents;
+    double comp;
+    map<int, double> components;
+    
+    cin >> numComponents;
+    
+    for(int i=1; i<= numComponents; i++){
+      cin >> comp;
+      components.insert(make_pair(i, comp)); 
+    }
+    
+    map<int, double>::iterator ip = components.begin();
+    
+    while(ip!=components.end()){
+      cout<< ip->first<< " "<< ip->second<<endl;
+      ip++;
+    }
+    return 0;
+}*/
